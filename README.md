@@ -33,13 +33,13 @@ Add the Service Provider and Facade to your ```app.php``` config file if you're 
 
 'providers' => [
     ...
-    mronx\LaravelFFMpeg\FFMpegServiceProvider::class,
+    Mronx\LaravelFFMpeg\FFMpegServiceProvider::class,
     ...
 ];
 
 'aliases' => [
     ...
-    'FFMpeg' => mronx\LaravelFFMpeg\FFMpegFacade::class
+    'FFMpeg' => Mronx\LaravelFFMpeg\FFMpegFacade::class
     ...
 ];
 ```
@@ -47,7 +47,7 @@ Add the Service Provider and Facade to your ```app.php``` config file if you're 
 Publish the config file using the artisan CLI tool:
 
 ``` bash
-php artisan vendor:publish --provider="mronx\LaravelFFMpeg\FFMpegServiceProvider"
+php artisan vendor:publish --provider="Mronx\LaravelFFMpeg\FFMpegServiceProvider"
 ```
 
 ## Usage
@@ -248,7 +248,7 @@ $exporter = FFMpeg::open('steve_howe.mp4')
 The Media object you get when you 'open' a file, actually holds the Media object that belongs to the [underlying driver](https://github.com/PHP-FFMpeg/PHP-FFMpeg). It handles dynamic method calls as you can see [here](https://github.com/mronx/laravel-ffmpeg/blob/master/src/Media.php#L114-L117). This way all methods of the underlying driver are still available to you.
 
 ```php
-// This gives you an instance of mronx\LaravelFFMpeg\Media
+// This gives you an instance of Mronx\LaravelFFMpeg\Media
 $media = FFMpeg::fromDisk('videos')->open('video.mp4');
 
 // The 'getStreams' method will be called on the underlying Media object since
@@ -259,7 +259,7 @@ $codec = $media->getStreams()->first()->get('codec_name');
 If you want direct access to the underlying object, call the object as a function (invoke):
 
 ```php
-// This gives you an instance of mronx\LaravelFFMpeg\Media
+// This gives you an instance of Mronx\LaravelFFMpeg\Media
 $media = FFMpeg::fromDisk('videos')->open('video.mp4');
 
 // This gives you an instance of FFMpeg\Media\MediaTypeInterface
