@@ -1,6 +1,6 @@
 <?php
 
-namespace Pbmedia\LaravelFFMpeg;
+namespace Mronx\LaravelFFMpeg;
 
 use Closure;
 use FFMpeg\Coordinate\TimeCode;

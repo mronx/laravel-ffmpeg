@@ -1,9 +1,9 @@
 <?php
 
-namespace Pbmedia\LaravelFFMpeg;
+namespace Mronx\LaravelFFMpeg;
 
 use FFMpeg\Format\VideoInterface;
-use Pbmedia\LaravelFFMpeg\SegmentedExporter;
+use Mronx\LaravelFFMpeg\SegmentedExporter;
 
 class HLSPlaylistExporter extends MediaExporter
 {

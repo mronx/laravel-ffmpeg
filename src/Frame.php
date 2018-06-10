@@ -1,6 +1,6 @@
 <?php
 
-namespace Pbmedia\LaravelFFMpeg;
+namespace Mronx\LaravelFFMpeg;
 
 use FFMpeg\Media\Frame as BaseFrame;
 

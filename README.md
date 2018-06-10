@@ -1,10 +1,10 @@
 # Laravel FFMpeg
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/pbmedia/laravel-ffmpeg.svg?style=flat-square)](https://packagist.org/packages/pbmedia/laravel-ffmpeg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mronx/laravel-ffmpeg.svg?style=flat-square)](https://packagist.org/packages/mronx/laravel-ffmpeg)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/pascalbaljetmedia/laravel-ffmpeg/master.svg?style=flat-square)](https://travis-ci.org/pascalbaljetmedia/laravel-ffmpeg)
-[![Quality Score](https://img.shields.io/scrutinizer/g/pascalbaljetmedia/laravel-ffmpeg.svg?style=flat-square)](https://scrutinizer-ci.com/g/pascalbaljetmedia/laravel-ffmpeg)
-[![Total Downloads](https://img.shields.io/packagist/dt/pbmedia/laravel-ffmpeg.svg?style=flat-square)](https://packagist.org/packages/pbmedia/laravel-ffmpeg)
+[![Build Status](https://img.shields.io/travis/mronx/laravel-ffmpeg/master.svg?style=flat-square)](https://travis-ci.org/mronx/laravel-ffmpeg)
+[![Quality Score](https://img.shields.io/scrutinizer/g/mronx/laravel-ffmpeg.svg?style=flat-square)](https://scrutinizer-ci.com/g/mronx/laravel-ffmpeg)
+[![Total Downloads](https://img.shields.io/packagist/dt/mronx/laravel-ffmpeg.svg?style=flat-square)](https://packagist.org/packages/mronx/laravel-ffmpeg)
 
 This package provides an integration with FFmpeg for Laravel 5.6. The storage of the files is handled by [Laravel's Filesystem](http://laravel.com/docs/5.6/filesystem).
 
@@ -22,7 +22,7 @@ This version of the package is only compatible with Laravel 5.6. If you're still
 You can install the package via composer:
 
 ``` bash
-composer require pbmedia/laravel-ffmpeg
+composer require mronx/laravel-ffmpeg
 ```
 
 Add the Service Provider and Facade to your ```app.php``` config file if you're not using Package Discovery.
@@ -33,13 +33,13 @@ Add the Service Provider and Facade to your ```app.php``` config file if you're 
 
 'providers' => [
     ...
-    Pbmedia\LaravelFFMpeg\FFMpegServiceProvider::class,
+    mronx\LaravelFFMpeg\FFMpegServiceProvider::class,
     ...
 ];
 
 'aliases' => [
     ...
-    'FFMpeg' => Pbmedia\LaravelFFMpeg\FFMpegFacade::class
+    'FFMpeg' => mronx\LaravelFFMpeg\FFMpegFacade::class
     ...
 ];
 ```
@@ -47,7 +47,7 @@ Add the Service Provider and Facade to your ```app.php``` config file if you're 
 Publish the config file using the artisan CLI tool:
 
 ``` bash
-php artisan vendor:publish --provider="Pbmedia\LaravelFFMpeg\FFMpegServiceProvider"
+php artisan vendor:publish --provider="mronx\LaravelFFMpeg\FFMpegServiceProvider"
 ```
 
 ## Usage
@@ -245,10 +245,10 @@ $exporter = FFMpeg::open('steve_howe.mp4')
 
 ## Advanced
 
-The Media object you get when you 'open' a file, actually holds the Media object that belongs to the [underlying driver](https://github.com/PHP-FFMpeg/PHP-FFMpeg). It handles dynamic method calls as you can see [here](https://github.com/pascalbaljetmedia/laravel-ffmpeg/blob/master/src/Media.php#L114-L117). This way all methods of the underlying driver are still available to you.
+The Media object you get when you 'open' a file, actually holds the Media object that belongs to the [underlying driver](https://github.com/PHP-FFMpeg/PHP-FFMpeg). It handles dynamic method calls as you can see [here](https://github.com/mronx/laravel-ffmpeg/blob/master/src/Media.php#L114-L117). This way all methods of the underlying driver are still available to you.
 
 ```php
-// This gives you an instance of Pbmedia\LaravelFFMpeg\Media
+// This gives you an instance of mronx\LaravelFFMpeg\Media
 $media = FFMpeg::fromDisk('videos')->open('video.mp4');
 
 // The 'getStreams' method will be called on the underlying Media object since
@@ -259,7 +259,7 @@ $codec = $media->getStreams()->first()->get('codec_name');
 If you want direct access to the underlying object, call the object as a function (invoke):
 
 ```php
-// This gives you an instance of Pbmedia\LaravelFFMpeg\Media
+// This gives you an instance of mronx\LaravelFFMpeg\Media
 $media = FFMpeg::fromDisk('videos')->open('video.mp4');
 
 // This gives you an instance of FFMpeg\Media\MediaTypeInterface
@@ -292,6 +292,7 @@ If you discover any security related issues, please email pascal@pascalbaljetmed
 
 ## Credits
 
+- [Mronx](https://github.com/mronx)
 - [Pascal Baljet](https://github.com/pascalbaljet)
 - [All Contributors](../../contributors)
 

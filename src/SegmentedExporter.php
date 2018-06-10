@@ -1,6 +1,6 @@
 <?php
 
-namespace Pbmedia\LaravelFFMpeg;
+namespace Mronx\LaravelFFMpeg;
 
 class SegmentedExporter extends MediaExporter
 {

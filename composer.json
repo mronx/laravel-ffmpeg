@@ -2,7 +2,7 @@
     "name": "mronx/laravel-ffmpeg",
     "description": "FFMpeg for Laravel",
     "keywords": [
-        "pbmedia",
+        "mronx",
         "laravel-ffmpeg"
     ],
     "homepage": "https://github.com/mronx/laravel-ffmpeg",
@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Pbmedia\\LaravelFFMpeg\\": "src"
+            "Mronx\\LaravelFFMpeg\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Pbmedia\\LaravelFFMpeg\\Tests\\": "tests"
+            "Mronx\\LaravelFFMpeg\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Pbmedia\\LaravelFFMpeg\\FFMpegServiceProvider"
+                "Mronx\\LaravelFFMpeg\\FFMpegServiceProvider"
             ],
             "aliases": {
-                "FFMpeg": "Pbmedia\\LaravelFFMpeg\\FFMpegFacade"
+                "FFMpeg": "Mronx\\LaravelFFMpeg\\FFMpegFacade"
             }
         }
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pbmedia\LaravelFFMpeg;
+namespace Mronx\LaravelFFMpeg;
 
 use Illuminate\Support\ServiceProvider;
-use Pbmedia\LaravelFFMpeg\FFMpeg;
+use Mronx\LaravelFFMpeg\FFMpeg;
 
 class FFMpegServiceProvider extends ServiceProvider
 {

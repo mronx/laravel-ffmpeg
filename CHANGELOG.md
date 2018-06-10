@@ -1,6 +1,6 @@
 # Changelog
 
-All Notable changes to `pbmedia/laravel-ffmpeg` will be documented in this file
+All Notable changes to `mronx/laravel-ffmpeg` (`mronx/laravel-ffmpeg`) will be documented in this file
 
 ## 2.1.0 - 2018-04-10
 

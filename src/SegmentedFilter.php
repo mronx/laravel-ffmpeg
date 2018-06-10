@@ -1,6 +1,6 @@
 <?php
 
-namespace Pbmedia\LaravelFFMpeg;
+namespace Mronx\LaravelFFMpeg;
 
 use FFMpeg\Filters\Video\VideoFilterInterface;
 use FFMpeg\Format\VideoInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pbmedia\LaravelFFMpeg\Tests;
+namespace Mronx\LaravelFFMpeg\Tests;
 
 use FFMpeg\Coordinate\Dimension;
 use FFMpeg\Coordinate\TimeCode;
@@ -20,11 +20,11 @@ use League\Flysystem\AdapterInterface;
 use League\Flysystem\FilesystemInterface;
 use Mockery;
 use Monolog\Logger;
-use Pbmedia\LaravelFFMpeg\Disk;
-use Pbmedia\LaravelFFMpeg\FFMpeg;
-use Pbmedia\LaravelFFMpeg\File;
-use Pbmedia\LaravelFFMpeg\Media;
-use Pbmedia\LaravelFFMpeg\MediaExporter;
+use Mronx\LaravelFFMpeg\Disk;
+use Mronx\LaravelFFMpeg\FFMpeg;
+use Mronx\LaravelFFMpeg\File;
+use Mronx\LaravelFFMpeg\Media;
+use Mronx\LaravelFFMpeg\MediaExporter;
 
 class AudioVideoTest extends TestCase
 {
